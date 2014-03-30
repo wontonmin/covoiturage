@@ -20,7 +20,7 @@ switch($action)
         include "vues/pageoffre.php";
         break;
 }
-
+//test de connexion
 ?>
 </body>
 </html>
