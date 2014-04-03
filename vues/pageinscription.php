@@ -4,7 +4,37 @@
 include "vues/entete_retour.html";
 include "vues/logo.html";
 ?>
-    <h3>Page en construction</h3>
+    <!--- Formulaire d'inscription --->
+    <div data-role="fieldcontain">
+        <label for="nom">Nom </label>
+        <input type="text" name="nom" id="nom" value=""  />
+        
+        <label for="prenom">Prénom </label>
+        <input type="text" name="prenom" id="prenom" value="" />
+        
+        <label for="mail">Mail </label>
+        <input type="text" name="mail" id="mail" value="" />
+        
+        <label for="telephone">Téléphone </label>
+        <input type="text" name="telephone" id="telephone" value="" />
+        
+
+        <fieldset data-role="controlgroup" data-type="horizontal">
+            <legend>Indiquer votre service</legend>
+         	<input type="radio" name="service" id="radio-recherche" value="radio-1" checked="checked" />
+         	<label for="radio-recherche">Recherche</label>
+
+         	<input type="radio" name="service" id="radio-production" value="radio-2"  />
+         	<label for="radio-production">Production</label>
+
+         	<input type="radio" name="service" id="radio-commercial" value="radio-3"  />
+         	<label for="radio-commercial">Commercial</label>
+
+         	<input type="radio" name="service" id="radio-securite" value="radio-4"  />
+         	<label for="radio-securite">Sécurité</label>
+        </fieldset>
+        <input type="submit" value="Envoyez" />
+    </div>
  <?php
    include "vues/pied.html";
 ?>
