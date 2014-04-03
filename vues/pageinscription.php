@@ -33,7 +33,12 @@ include "vues/logo.html";
          	<input type="radio" name="type" id="radio-securite" value="radio-4"  />
          	<label for="radio-securite">Sécurité</label>
         </fieldset>
-        <input type="submit" id="btninscription" value="Envoyez" />
+        
+        <div id="divinscription"></div>
+        
+        <p>
+            <a href="#" data-role="button" id="btninscription" >Envoyez</a>
+        </p>
     </div>
  <?php
    include "vues/pied.html";
