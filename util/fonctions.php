@@ -16,7 +16,7 @@ function getLesOffresDepartEntreprise()
                        "jour"=>"mardi",
                        "date"=>"permanent",
                        "heure"=>"15h",
-                       "retour"=>"paris 20",
+                       "retour"=>"Paris 20",
                        "nom"=>"Durand",
                        "prenom"=>"Jean",
                        "mail"=>"durand@gmail.com",
