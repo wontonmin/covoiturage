@@ -15,8 +15,8 @@ include "vues/logo.html";
         <label for="mail">Mail </label>
         <input type="text" name="mail" id="mail" value="" />
         
-        <label for="telephone">Téléphone </label>
-        <input type="text" name="telephone" id="telephone" value="" />
+        <label for="tel">Téléphone </label>
+        <input type="text" name="tel" id="tel" value="" />
         
 
         <fieldset data-role="controlgroup" data-type="horizontal">
