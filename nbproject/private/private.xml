@@ -4,22 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp/www/appliMobile/covoiturage/util/fonctions.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/ajax/traiterconnexion.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pagemenuaccueil.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/images/logo.gif</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/js/monjs.js</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/ajax/traiteroffre.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/ajax/enregistreruser.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pageinscription.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/index.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/entetepage.html</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pied.html</file>
             <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/entete_retour.html</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/logo.html</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pageoffresoffertes.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pageconnexion.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pageoffre.php</file>
-            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/entete.html</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pagemenuaccueil.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/js/monjs.js</file>
         </group>
     </open-files>
 </project-private>

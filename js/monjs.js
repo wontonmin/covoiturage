@@ -29,6 +29,7 @@ $(function(){
              }
              else{
              // sinon affichage d'un message dans la div d'id message  
+                $("#message").css({color:'red'}); //ajout de la couleur rouge au message d'erreur
                 $("#message").html("erreur de login et/ou mdp");
              }
     }
