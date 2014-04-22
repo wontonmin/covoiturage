@@ -3,9 +3,10 @@
 include "vues/entete_retour.html";
 ?>
  <div data-role="content" >  
-     <div id="offre">
-         Page en construction
- </div>
+    <div id="offre"> 
+        
+        Page en construction
+    </div>
     
     
     
