@@ -3,8 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/xampp/htdocs/covoiturage/js/monjs.js</file>
-            <file>file:/D:/xampp/htdocs/covoiturage/vues/entete_retour.html</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pied.html</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/util/fonctions.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/entete_retour.html</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/ajax/traiterconnexion.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pagemenuaccueil.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pageoffresoffertes.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/ajax/traiteroffre.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/js/monjs.js</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/vues/pageoffre.php</file>
+            <file>file:/C:/wamp/www/appliMobile/covoiturage/ajax/enregistreruser.php</file>
         </group>
     </open-files>
 </project-private>
