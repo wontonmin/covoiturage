@@ -61,6 +61,19 @@ $(function(){
                    
     
     
+    
+    //Page offres offertes
+    //------------------------------------------------------------
+    //--- Récupère l'id des offres
+    
+    
+    $("#lstoffres> li").click( function() { 
+    var id = $(this).attr("id");
+                    alert(id);
+     });
+    
+    
+    
 }); // fin fonction principale/* 
 
 
