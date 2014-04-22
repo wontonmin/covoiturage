@@ -8,8 +8,8 @@
 <?php
 $i = 0; 
 $jour = "";
-foreach ($lesOffres as $uneOffre){
-    if($jour!=$uneOffre['jour']){
+foreach ($lesOffres as $uneOffre) {
+    if($jour!=$uneOffre['jour']) {
         $jour=$uneOffre['jour'];
         if($i!=0){
         ?>

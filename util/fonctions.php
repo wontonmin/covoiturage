@@ -76,4 +76,17 @@ function getLesOffresDepartEntreprise()
     return $tab;
     
 }
+
+
+function getOffreDepartEntreprise($id){
+    $lesOffres = getLesOffresDepartEntreprise();
+    $offre=array();
+    foreach ($lesOffres as $uneOffre){
+            if($uneOffre["id"]==$id)
+                 $offre =  $uneOffre;
+    }
+    return $offre;
+}
+
+
 ?>

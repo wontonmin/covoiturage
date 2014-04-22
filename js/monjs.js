@@ -69,8 +69,35 @@ $(function(){
     
     $("#lstoffres> li").click( function() { 
     var id = $(this).attr("id");
-                    alert(id);
+        $.post("ajax/traiteroffre.php",{
+                    "idOffre" : id
+                    },
+                     foncRetourOffre,"json" );
      });
+     
+     function  foncRetourOffre(data){
+                var nom = data["nom"];
+                var prenom = data["prenom"];
+                var numeroTel = data["tel"];
+                var mail = data["mail"];
+                $("#nom").html(nom);
+                $("#prenom").html(prenom);
+                //Teste si l'offre est au départ du domicile -présence du champ ramassage-
+                // On aurait pu le faire sur la présence du champ "depart"
+                if(data["ramassage"]){
+                    var tabRamassage = data["ramassage"];
+                    var champramassage = "<br>Etape(s)possible(s) sur le trajet : <ul>";
+                    for(var etape in tabRamassage){
+                        champramassage += "<li>" + tabRamassage[etape]['lieu'] + "</li>";
+                    }
+                    champramassage += "</ul>";
+                    $("#ramassage").html(champramassage);
+                }
+                   var champmail = "mailto:" + mail;
+                   var champtel = "tel:" + numeroTel;
+                   $("#tel").attr("href", champtel);
+                   $("#mail").attr("href", champmail);
+         }
     
     
     
