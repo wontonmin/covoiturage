@@ -4,6 +4,7 @@ include "vues/entete.html";
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else 
+    
     $action = $_REQUEST['action'];
 switch($action)
 {
