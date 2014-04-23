@@ -1,8 +1,10 @@
 <div data-role="page" id="pagegerermesoffres">
-    <div data-role="content" id="divmesoffres">   
+     
 <?php
 include "vues/entete_retour.html";
 ?>
+    
+     <div data-role="content" id="divmesoffres"> 
      <legend id="test" >Mes offres au départ de l'entreprise</legend>
         <div data-role="controlgroup"id="listdepart" data-theme="b">
             <?php 
