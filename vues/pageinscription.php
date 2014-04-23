@@ -1,47 +1,34 @@
 <div data-role="page" id="pageinscription">
-    <div data-role="content" >   
 <?php
 include "vues/entete_retour.html";
 include "vues/logo.html";
 ?>
-    <!--- Formulaire d'inscription --->
-    <div data-role="fieldcontain">
+<div data-role="content" id="divinscription"> 
+    <form action="#" rel="external">
+     <div data-role="fieldcontain" id ="champsinscription">
         <label for="nom">Nom </label>
         <input type="text" name="nom" id="nom" value=""  />
-        
-        <label for="prenom">Prénom </label>
+        <label for="prenom">Prénom</label>
         <input type="text" name="prenom" id="prenom" value="" />
-        
-        <label for="mail">Mail </label>
+        <label for="mail">Mail</label>
         <input type="text" name="mail" id="mail" value="" />
-        
-        <label for="tel">Téléphone </label>
-        <input type="text" name="tel" id="tel" value="" />
-        
-
-        <fieldset data-role="controlgroup" data-type="horizontal">
+        <label for="tel">téléphone</label>
+        <input type="text" name="tel" id="tel" value=""  />
+        <label id="message"></label>
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
             <legend>Indiquer votre service</legend>
-         	<input type="radio" name="type" id="radio-recherche" value="radio-1" checked="checked" />
-         	<label for="radio-recherche">Recherche</label>
-
-         	<input type="radio" name="type" id="radio-production" value="radio-2"  />
-         	<label for="radio-production">Production</label>
-
-         	<input type="radio" name="type" id="radio-commercial" value="radio-3"  />
-         	<label for="radio-commercial">Commercial</label>
-
-         	<input type="radio" name="type" id="radio-securite" value="radio-4"  />
-         	<label for="radio-securite">Sécurité</label>
+            <input name="type" id="rdre" type="radio" checked="checked" value="recherche">
+            <label for="rdre">Recherche</label>
+            <input name="type" id="rdpr" type="radio" value="production">
+            <label for="rdpr">Production</label>
+            <input name="type" id="rdco" type="radio" value="commercial">
+            <label for="rdco">Commercial</label>
+            <input name="type" id="rdse" type="radio" value="securite">
+            <label for="rdse">Securite</label>
         </fieldset>
-        
-        <div id="divinscription"></div>
-        
-        <p>
-            <a href="#" data-role="button" id="btninscription" >Envoyez</a>
-        </p>
-    </div>
- <?php
-   include "vues/pied.html";
-?>
-    </div><!-- /content -->
-</div><!-- /page -->
+          <input type="submit" name="submit" id="btninscription" value="Envoyer"  />
+     </div>
+    </form>
+   
+</div><!-- fin content-->
+</div><!-- fin page-->
