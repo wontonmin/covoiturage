@@ -5,12 +5,17 @@ $mail = $_REQUEST['mail'];
 $type = $_REQUEST['type'];
 $tel = $_REQUEST['tel'];
 // enregistrerEnBase(...); pas dans cette itération
-// générer le nom de user : à faire
-// générer le mdp travail à faire
 
+$login = $prenom[0].$nom;
+$mdp="";
+for($i= 1;$i<=4;$i++){
+    do{
+       $n=rand(49,122); 
+        
+    }while( ($n>57&&$n<65)||($n>90 && $n<97));
+     $mdp=$mdp.chr($n);
+}
 
-$login = "jbenoit";
-$mdp = "RT2K";
 
 
 
