@@ -5,7 +5,7 @@ include "vues/logo.html";
 ?>
 <div data-role="content" id="divconnexion">       
    <!-- si on n'indique pas rel=external, charge tout le document -->
-   <a href="index.php?action=inscription" rel="external">Vous inscrire</a> 
+
     <div data-role="fieldcontain">
    
         <label for="login">Login </label>
@@ -16,7 +16,8 @@ include "vues/logo.html";
      </div>
    <div id="message" data-theme="e"></div>
      <p>
-       <a href="#" rel="external" data-role="button" id="btnconnexion" >Connexion</a>
+       <a href="#" rel="external" data-role="button" id="btnconnexion" data-mini="true" data-inline="true">Connexion</a>
+       <a href="index.php?action=inscription" data-role="button" rel="external" data-mini="true" data-inline="true">Vous inscrire</a> 
      </p>
         </div><!-- /content -->
         <div id=pied></div>
