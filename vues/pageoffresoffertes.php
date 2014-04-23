@@ -1,37 +1,44 @@
-<div data-role="page" id="pagegerermesoffres">
-    <div data-role="content" id="divmesoffres">   
+<div data-role="page" id="pageoffresoffertes">
 <?php
 include "vues/entete_retour.html";
 ?>
-     <legend id="test" >Mes offres au départ de l'entreprise</legend>
-        <div data-role="controlgroup"id="listdepart" data-theme="b">
-            <?php 
-                foreach($lesOffresDepartEntreprise as $uneOffre){
-                        $legende = $uneOffre['jour']."   ".$uneOffre['date']."   ".$uneOffre['heure'];  
-            ?>
-            <input  id="<?php echo $uneOffre['id']?>" type="checkbox" data-theme="b">
-            <label  for="<?php echo $uneOffre['id']?>" data-theme="b"><?php echo $legende?></label>
-            <?php }
-            ?>
-        </div>
-        <div data-role="controlgroup"id="listarrivee"> 
-            <legend>Mes offres au départ du domicile</legend>
-            <?php 
-            foreach($lesOffresArriveeEntreprise as $uneOffre){
-                $legende = $uneOffre['jour']."   ".$uneOffre['date']."   ".$uneOffre['heure'];  
-            ?>
-                <input  id="<?php echo $uneOffre['id']?>" type="checkbox" data-theme="b">
-                 <label for="<?php echo $uneOffre['id']?>" data-theme="b"><?php echo $legende?></label>
-
-        <?php }
-            ?>
-        </div>        
-            <p>
-                <a   data-role="button" id="btnSupprimer" data-icon="delete">Supprimer</a>
-            </p>
-      </div><!-- /fin content -->    
-<?php    
-    include "vues/pied.html";
+    <div data-role="content" > 
+        <div data-role="collapsible-set" id="divliste" data-theme="c"> 
+          
+<?php
+$jour = "";
+$i = 0;    
+foreach ($lesOffres as $uneOffre){
+    if($jour!=$uneOffre['jour']){
+        $jour=$uneOffre['jour'];
+        if($i!=0){
+        ?>
+          </ul>
+            </div><!-- /fin collapsible -->    
+         <?php } ?>
+            <div data-role="collapsible" >
+                <h3><?php echo $jour ?></h3>
+             <ul data-role="listview" id="lstoffres">
+        <?php 
+     }
+         ?>
+              <li id="<?php echo $uneOffre['id'] ?>"><a href ="#pageoffre">
+         <?php 
+               if($_SESSION['choix']=="arriveeentreprise")
+                   echo $uneOffre['date']." à ".$uneOffre['heure']." départ de ".$uneOffre['depart'];
+               else 
+                   echo $uneOffre['date']." à ".$uneOffre['heure']." vers ".$uneOffre['retour'];
+          ?> 
+                    </a>
+              </li> 
+          <?php 
+    $i++;   
+    }
 ?>
-        
-</div><!-- /fin page -->
+      </div>  <!-- /fin dernier collapsible -->            
+ </div>  <!-- /fin collapsible-set -->
+ </div> <!-- fin content--> 
+    <?php    
+include "vues/pied.html";
+?>
+</div><!-- fin page-->
