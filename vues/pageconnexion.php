@@ -16,8 +16,8 @@ include "vues/logo.html";
      </div>
    <div id="message" data-theme="e"></div>
      <p>
-       <a href="#" rel="external" data-role="button" id="btnconnexion" data-mini="true" data-inline="true">Connexion</a>
-       <a href="index.php?action=inscription" data-role="button" rel="external" data-mini="true" data-inline="true">Vous inscrire</a> 
+       <a href="#" rel="external" data-role="button" id="btnconnexion" data-mini="true" data-inline="true" data-theme="b">Connexion</a>
+       <a href="index.php?action=inscription" data-role="button" rel="external" data-mini="true" data-inline="true" data-theme="b">Vous inscrire</a> 
      </p>
         </div><!-- /content -->
         <div id=pied></div>
