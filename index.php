@@ -31,8 +31,11 @@ switch($action)
          $lesOffresArriveeEntreprise = getMesOffresArriveeEntreprise($id);
          $lesOffresDepartEntreprise = getMesOffresDEpartEntreprise($id);
           include "vues/pagegerermesoffres.php";
+          //ajout de l'include ajouter offre
+          include "vues/pageajouteroffre.php";
           break;
      default :
+         include "vues/entete.html";
          include "vues/pageconnexion.php";
    }
 

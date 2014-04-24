@@ -1,8 +1,9 @@
 <div data-role="page" id="pageajouteroffre">
-    <div data-role="content" id="divajouteroffre">   
 <?php
-include "vues/entetepageavecboutonretour.html";
+include "vues/entete_retour.html";
 ?>
+<div data-role="content" id="divajouteroffre">   
+    
 <form id="frmoffre" action="#">
     <legend> Départ </legend>
     <select id="typeoffre" data-role="slider" data-inline="true">
