@@ -56,37 +56,95 @@ $(function(){
                  $("#divinscription").html(data);
     }
    /*********************************** Page offresoffertes************************************/  
-    
-        $("#lstoffres > li").click( function() {
+   /*********************************** Page offresoffertes************************************/  
+			
+			//Le sélecteur $("#offresarrivee, #offresdepart ") permet d’abonner les deux éléments 
+			//d’identifiant offresarrivee et offresdepart au même événement : vous décidez ainsi d’informer l’appel Ajax de la nature de la demande.
+			
+           $("#offresarrivee, #offresdepart ").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                var idBouton = $(this).attr("id");
+                var paramAjax = "arriveedomicile";
+                if(idBouton == "offresarrivee" )
+                    paramAjax = "arriveeentreprise";
+                $.post("ajax/traiterlesoffres.php",{
+                    "typeoffre" : paramAjax
+                 },
+                    foncRetourLesOffres,"json" );
+            });
+       function foncRetourLesOffres(lesOffres){
+            $.mobile.changePage("#pageoffresoffertes");
+            $("#pageoffresoffertes #divliste").empty();  
+            var jour ="";
+            var n = 0;
+            for(var i =0; i< lesOffres.length;i++ ){
+                if(jour != lesOffres[i]['jour']){
+                    n++;
+                    jour = lesOffres[i]['jour'];
+                    var html ="";
+                    if(i!=0){
+                        html="</ul></div>";
+                    }
+                    html += "<div data-role=collapsible id=collaps" + n + " >";
+                    html += "<h3>"+jour+"</h3>";
+                    html += "<ul data-role=listview id=lstoffres" + n + " > ";
+                    $("#pageoffresoffertes #divliste").append(html);
+                    }
+                    html = "<li id=" + lesOffres[i]['id']+" ><a href =#pageoffre >";
+                    $("#pageoffresoffertes #lstoffres" + n).append(html);
+                    if(lesOffres[i]['ramassage']){
+                        html = lesOffres[i]['date'] + " à "+ lesOffres[i]['heure']+" depart de "+ lesOffres[i]['depart']+"</a></li>";
+                        $("#pageoffresoffertes #"+lesOffres[i]['id']).attr("title","arriveeentreprise");  
+                    }
+                    else{
+                        html = lesOffres[i]['date'] + " à "+ lesOffres[i]['heure']+" arrivée à "+ lesOffres[i]['retour']+"</a></li>";
+                        $("#pageoffresoffertes #"+lesOffres[i]['id']).attr("title","arriveedomicile"); 
+                    }
+                    $("#pageoffresoffertes li#"+lesOffres[i]['id']+">a").append(html);
+                }
+                $("#pageoffresoffertes #divliste").trigger('create');  // génère un événement créate et construit les objets jQuery
+        }
+  
+        $("#pageoffresoffertes").on("click","li", function() {  
                           var id = $(this).attr("id");
+                          var choix =  $(this).attr("title");
                           $.post("ajax/traiteroffre.php",{
-                                "idOffre" : id
+                                "idOffre" : id,
+                                "choix" : choix
                                 },
                                  foncRetourOffre,"json" );
           });
-          function  foncRetourOffre(data){
-                var nom = data["nom"];
-                var prenom = data["prenom"];
-                var numeroTel = data["tel"];
-                var mail = data["mail"];
-                $("#nom").html(nom);
-                $("#prenom").html(prenom);
-                //Teste si l'offre est au départ du domicile -présence du champ ramassage-
-                // On aurait pu le faire sur la présence du champ "depart"
-                if(data["ramassage"]){
-                    var tabRamassage = data["ramassage"];
-                    var champramassage = "<br>Etape(s)possible(s) sur le trajet : <ul>";
+          
+           function  foncRetourOffre(data){
+                
+              $("#pageoffre #ramassage").empty();
+           
+              var nom = data["nom"];
+              var lieu;
+              if(data["depart"])
+                  lieu = data["depart"];
+              else
+                  lieu = data["retour"];
+              var prenom = data["prenom"];
+              var numeroTel = data["tel"];
+              var mail = data["mail"];
+              var html="";
+              $("#pageoffre #nom").html(nom);
+              $("#pageoffre #prenom").html(prenom);
+              if(data["ramassage"]){
+                    var tabRamassage=data["ramassage"];
+                    html ="<br>Etape(s)possible(s) sur le trajet : <ul>";
                     for(var etape in tabRamassage){
-                        champramassage += "<li>" + tabRamassage[etape]['lieu'] + "</li>";
+                        html+="<li>"+tabRamassage[etape]['lieu']+"</li>";
                     }
-                    champramassage += "</ul>";
-                    $("#ramassage").html(champramassage);
+                    html+="</ul>";
+                    $("#pageoffre #ramassage").html(html);
                 }
-                   var champmail = "mailto:" + mail;
-                   var champtel = "tel:" + numeroTel;
-                   $("#tel").attr("href", champtel);
-                   $("#mail").attr("href", champmail);
-         }
+                $("#pageoffre #tel").attr("href","tel:"+numeroTel);
+                $("#pageoffre #mail").attr("href","mailto:"+mail);
+               
+              }
   /*********************************** Page gerermesoffres************************************/  
          $("#btnSupprimer").click(function(){
                 var valeurs=[];
