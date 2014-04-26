@@ -147,12 +147,27 @@ $(function(){
               }
        /**************************** page de gestion de mes offres*******************************************************/
        
-       $("#gerermesoffres").click(function(){
-           
-          alert("Data Loaded: ");
+       $("body").on("click","#gerermesoffres",function(e){
+           e.preventDefault();
+           e.stopPropagation();
+           $.post("ajax/traitergerermesoffres.php",
+                  foncRetourMesOffres, "json");
        });
+            
                     
-     
+       function foncRetourMesOffres(data){
+           $.mobile.changePage("#pagegerermesoffres");
+           var lesOffresDepartEntreprise = data['departenentreprise'];
+           var lesOffresArriveeEntreprise = data['arriveeentreprise'];
+           $("#listdepart").empty();
+           for(var i=0; i < lesOffresDepartEntreprise.length; i++){
+               var uneOffre = lesOffresDepartEntreprise[i];
+               var legende = dataOffre['jour'] + "  " + uneOffre['date'] + "  " + uneOffre['heure'];
+               var html = "<input id=" + uneOffre['id'] + " type=checkbox data-theme=b>";
+               html+="<label for=" + uneOffre['id'] + "data-theme=b>"+ legend +"</label>";
+               $("#listdepart").append(html);
+           }
+       }
       
     
 }); // fin fonction principale/* 
