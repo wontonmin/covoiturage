@@ -12,7 +12,7 @@ include "vues/logo.html";
         <input type="text" name="prenom" id="prenom" value="" />
         <label for="mail">Mail</label>
         <input type="text" name="mail" id="mail" value="" />
-        <label for="tel">téléphone</label>
+        <label for="tel">Téléphone</label>
         <input type="text" name="tel" id="tel" value=""  />
         <label id="message"></label>
         <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">

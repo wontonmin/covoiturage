@@ -56,10 +56,11 @@ $(function(){
                  $("#divinscription").html(data);
     }
    /*********************************** Page offresoffertes************************************/  
-   /*********************************** Page offresoffertes************************************/  
+
 			
-			//Le sélecteur $("#offresarrivee, #offresdepart ") permet d’abonner les deux éléments 
-			//d’identifiant offresarrivee et offresdepart au même événement : vous décidez ainsi d’informer l’appel Ajax de la nature de la demande.
+	//Le sélecteur $("#offresarrivee, #offresdepart ") permet d’abonner les deux éléments 
+	//d’identifiant offresarrivee et offresdepart au même événement : 
+        //vous décidez ainsi d’informer l’appel Ajax de la nature de la demande.
 			
            $("#offresarrivee, #offresdepart ").click(function(e){
                 e.preventDefault();
@@ -73,7 +74,8 @@ $(function(){
                  },
                     foncRetourLesOffres,"json" );
             });
-       function foncRetourLesOffres(lesOffres){
+            
+        function foncRetourLesOffres(lesOffres){
             $.mobile.changePage("#pageoffresoffertes");
             $("#pageoffresoffertes #divliste").empty();  
             var jour ="";
@@ -103,7 +105,7 @@ $(function(){
                     }
                     $("#pageoffresoffertes li#"+lesOffres[i]['id']+">a").append(html);
                 }
-                $("#pageoffresoffertes #divliste").trigger('create');  // génère un événement créate et construit les objets jQuery
+                $("#pageoffresoffertes #divliste").trigger('create');  // génère un événement create et construit les objets jQuery
         }
   
         $("#pageoffresoffertes").on("click","li", function() {  

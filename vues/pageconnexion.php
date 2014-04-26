@@ -18,6 +18,6 @@ include "vues/logo.html";
   </div><!-- /content -->
    
 <?php    
-//include "vues/pied.html";
+include "vues/pied.html";
 ?>
 </div><!-- /page -->
