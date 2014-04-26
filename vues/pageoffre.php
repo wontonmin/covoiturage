@@ -1,6 +1,6 @@
 <div data-role="page" id="pageoffre"> 
 <?php
-include "vues/entete_retour.html";
+include "vues/entetepageavecboutonretour.html";
 ?>
 <div data-role="content" id="contenu" >  
          <ul data-role ="listview" id="list" >

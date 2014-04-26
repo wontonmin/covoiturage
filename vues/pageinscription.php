@@ -1,19 +1,23 @@
 <div data-role="page" id="pageinscription">
+    <div data-role="header" data-theme="b">
+    <h1>COVOITURAGE</h1>
+        <a data-rel="back" data-icon="back">retour</a>
+        <a href="#pageconnexion" data-rel="home" data-icon="home" >Accueil</a>
+    </div><!-- /header -->
 <?php
-include "vues/entete_retour.html";
 include "vues/logo.html";
 ?>
 <div data-role="content" id="divinscription"> 
-    <form action="#" rel="external">
+    <form action="#"  id="frminscription">
      <div data-role="fieldcontain" id ="champsinscription">
         <label for="nom">Nom </label>
-        <input type="text" name="nom" id="nom" value=""  />
+        <input type="text" name="nom" id="nom" value=""  class="required" />
         <label for="prenom">Prénom</label>
-        <input type="text" name="prenom" id="prenom" value="" />
+        <input type="text" name="prenom" id="prenom" value="" class="required"/>
         <label for="mail">Mail</label>
-        <input type="text" name="mail" id="mail" value="" />
-        <label for="tel">Téléphone</label>
-        <input type="text" name="tel" id="tel" value=""  />
+        <input type="text" name="mail" id="mail" value=""  class="required email" />
+        <label for="tel">téléphone</label>
+        <input type="text" name="tel" id="tel" value="" class="required number" />
         <label id="message"></label>
         <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
             <legend>Indiquer votre service</legend>
@@ -29,6 +33,6 @@ include "vues/logo.html";
           <input type="submit" name="submit" id="btninscription" value="Envoyer"  />
      </div>
     </form>
-   
-</div><!-- fin content-->
+</div>
+
 </div><!-- fin page-->
