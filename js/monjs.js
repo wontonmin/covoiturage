@@ -147,7 +147,10 @@ $(function(){
               }
        /**************************** page de gestion de mes offres*******************************************************/
        
-            
+       $("#gerermesoffres").click(function(){
+           
+          alert("Data Loaded: ");
+       });
                     
      
       
