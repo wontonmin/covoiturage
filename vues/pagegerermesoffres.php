@@ -1,7 +1,7 @@
 <div data-role="page" id="pagegerermesoffres">
     <div data-role="content" id="divmesoffres">   
 <?php
-include "vues/entetepageavecboutonretour.html";
+include "vues/entete_retour.html";
 ?>
       
   </div><!-- /fin content -->    
@@ -9,3 +9,5 @@ include "vues/entetepageavecboutonretour.html";
     include "vues/pied.html";
 ?>
 </div><!-- /fin page -->
+
+

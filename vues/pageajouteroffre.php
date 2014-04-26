@@ -1,7 +1,7 @@
 <div data-role="page" id="pageajouteroffre">
     <div data-role="content" id="divajouteroffre">   
 <?php
-include "vues/entetepageavecboutonretour.html";
+include "vues/entete_retour.html";
 ?>
 <form id="frmoffre" action="#">
     <legend> Départ </legend>

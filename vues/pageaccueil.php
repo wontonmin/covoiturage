@@ -1,7 +1,9 @@
 <div data-role="page" id="pageaccueil">
-    <div data-role="content"> 
+    
 <?php
 include "vues/entetepage.html";
+?><div data-role="content"> 
+<?php
 include "vues/logo.html";
 ?>
     </div> <!-- /fin content -->

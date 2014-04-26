@@ -1,9 +1,10 @@
 <div data-role="page" id="pageconnexion">
 <?php
 include "vues/entetepage.html";
+?><div data-role="content" id="divconnexion">  <?php 
 include "vues/logo.html";
 ?>
-<div data-role="content" id="divconnexion">       
+     
     <div data-role="fieldcontain">
         <label for="login">Login </label>
         <input type="text" name="login" id="login" value="" />
@@ -18,6 +19,6 @@ include "vues/logo.html";
   </div><!-- /content -->
    
 <?php    
-//include "vues/pied.html";
+include "vues/pied.html";
 ?>
 </div><!-- /page -->

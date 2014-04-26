@@ -1,6 +1,6 @@
 <div data-role="page" id="pageoffresoffertes">
 <?php
-    include "vues/entetepageavecboutonretour.html";
+    include "vues/entete_retour.html";
 ?>
  <div data-role ="content">
     <div data-role="collapsible-set" id="divliste" data-theme="c"> 
@@ -11,5 +11,3 @@
 include "vues/pied.html";
 ?>
 </div><!-- /fin page -->
-
-
