@@ -1,8 +1,9 @@
 <div data-role="page" id="pageajouteroffre">
-    <div data-role="content" id="divajouteroffre">   
 <?php
 include "vues/entete_retour.html";
 ?>
+<div data-role="content" id="divajouteroffre">   
+    
 <form id="frmoffre" action="#">
     <legend> Départ </legend>
     <select id="typeoffre" data-role="slider" data-inline="true">
@@ -36,22 +37,18 @@ include "vues/entete_retour.html";
     <input name="minute" id="minute" type="range" min="0" max="55" step="5" value="0" data-highlight="true">
      <div id="divdate">
          <label for="date">Date </label>
-        <input type="text" name="date" id="date" placeholder="05/12/2014" value="" class="required date"  />	
+        <input type="date" name="date" id="date" placeholder="05/12/2014" value="" class="required date"  />	
       </div><!-- /fin date -->
       <label for="lieu">Lieu proposé </label>
         <input type="text" name="lieu" id="lieu"  value="" class="required" />	  
         <div id="divramassage">
             <legend>Points de ramassage éventuels sur le parcours</legend>
             <a href="#" data-role="button" data-icon="plus"  data-inline="true" id="btnnouveauramassage">Ajouter un point de ramassage</a>
-            
-            
         </div>
          <input  type="button" name="btnvalideroffre" id="btnvalideroffre" value="Envoyer"  />
-
 </form><!-- /fin formulaire -->
  </div><!-- /fin content -->
 <?php    
     include "vues/pied.html";
 ?>
-        
-</div><!-- /fin page -->
+  </div><!-- /fin page -->
