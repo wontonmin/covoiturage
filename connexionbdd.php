@@ -1,32 +1,32 @@
 <?php
     
-    class PdoGsb{
+    class PdoCov{
         
       	private static $serveur='mysql:host=localhost';
       	private static $bdd='dbname=covoiturage';   		
       	private static $user='root' ;    		
       	private static $mdp='' ;	
         private static $monPdo;
-        private static $monPdoGsb=null;
+        private static $monPdoCov=null;
         
         //------------------------------------------------------
         
         private function __construct(){
-    	PdoGsb::$monPdo = new PDO(PdoGsb::$serveur.';'.PdoGsb::$bdd, PdoGsb::$user, PdoGsb::$mdp); 
-		PdoGsb::$monPdo->query("SET CHARACTER SET utf8");
+    	PdoCov::$monPdo = new PDO(PdoCov::$serveur.';'.PdoCov::$bdd, PdoCov::$user, PdoCov::$mdp); 
+		PdoCov::$monPdo->query("SET CHARACTER SET utf8");
 	}
 	public function _destruct(){
-		PdoGsb::$monPdo = null;
+		PdoCov::$monPdo = null;
 	}
         
         //------------------------------------------------------
         
         
-        public  static function getPdoGsb(){
-		if(PdoGsb::$monPdoGsb==null){
-			PdoGsb::$monPdoGsb= new PdoGsb();
+        public  static function getPdoCov(){
+		if(PdoCov::$monPdoCov==null){
+			PdoCov::$monPdoCov= new PdoCov();
 		}
-		return PdoGsb::$monPdoGsb;  
+		return PdoCov::$monPdoCov;  
 	}
         
         //------------------------------------------------------
@@ -34,7 +34,7 @@
         public function getInfosVisiteur($login, $mdp){
 		$req = "select user.id as id, user.nom as nom, user.prenom as prenom from user 
 		where user.login='$login' and user.mdp='$mdp'";
-		$rs = PdoGsb::$monPdo->query($req);
+		$rs = PdoCov::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
 	}
