@@ -1,5 +1,37 @@
 <?php
     
+
+
+    /**
+     * Vérifie si l'utilisateur est connecté
+     * @return type
+     */
+    function estConnecte(){
+        return isset($_SESSION['idVisiteur']);
+    }
+
+    /**
+     * 
+     * @param type $id
+     * @param type $nom
+     * @param type $prenom
+     */
+    function connecter($id,$nom,$prenom){
+	$_SESSION['idVisiteur']= $id; 
+	$_SESSION['nom']= $nom;
+	$_SESSION['prenom']= $prenom;
+    }
+    
+    /**
+     * 
+     */
+    function deconnecter(){
+        session_destroy();
+    }
+
+    //------------------------------------------------------
+
+
     class PdoCov{
         
       	private static $serveur='mysql:host=localhost';
