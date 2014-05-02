@@ -1,4 +1,4 @@
 <?php
-    $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=covoiturage', 'root', '');
     
 ?>
